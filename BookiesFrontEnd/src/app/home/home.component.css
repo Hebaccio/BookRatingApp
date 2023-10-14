@@ -114,10 +114,14 @@ img:hover{
     transform: scale(1);
   }
   h1{
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 40px;
   }
   h2{
     font-size: 13px;
+  }
+  .material-icons{
+    font-size: 30px;
+    padding-right: 10px;
   }
 }

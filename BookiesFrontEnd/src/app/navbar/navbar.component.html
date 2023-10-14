@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <!--<div class="main-container">
   <button class="material-icons" id="login">login</button>
@@ -7,7 +8,7 @@
     <button class="material-icons">search</button>
     <button class="material-icons">person</button>
   </div>
-</div>-->
+</div>
 
 <div class="main-container">
   <div class="navbuttons-container">
@@ -30,3 +31,31 @@
     </div>
   </div>
 </div>
+
+-->
+
+<div class="main-container" id="maincontainer" *ngIf="isFixed">
+  <div class="navbuttons-container">
+    <button class="material-icons" title="Home" (click)="OpenHome()">home</button>
+    <button class="material-icons" title="Browse">menu_book</button>
+    <button class="material-icons" title="Profile">person</button>
+    <div class="dropdown">
+      <button class="material-icons" id="expand">more_vert</button>
+      <div class="dropdown-content">
+        <div class="list">
+          <a class="material-icons" id="expand2">settings</a>
+          <p>Settings</p>
+        </div>
+        <div class="list" (click)="OpenDatabaseEditor()">
+          <span class="material-symbols-outlined">storage</span>
+          <p>Database</p>
+        </div>
+        <div class="list" (click)="LogOut()">
+          <a class="material-icons" id="expand3">logout</a>
+          <p class="p">Log-out</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -38,6 +38,28 @@
   margin-left: 9px;
   margin-right: 9px;
 }
+.material-icons:hover{
+  cursor: pointer;
+
+  background-color: #314e7c;
+
+  transition: all 0.4s;
+}
+.material-symbols-outlined{
+  border-radius: 15px;
+  border: none;
+
+  background-color: #263752;
+
+  color: #e0dddd;
+  font-size: 20px;
+
+  padding: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 #login {
   float: right;
   clear: both;
@@ -55,8 +77,9 @@
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #314e7c;
   font-size: 15px;
-  padding: 5px;
-  margin:10px;
+  padding: 3px;
+  margin:7px;
+  margin-left: 0;
   transition: 0.3s;
 }
 #expand:hover{
@@ -96,12 +119,20 @@
 
   border-radius: 10px;
 }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .list{
   display: flex;
   background-color: #263752;
   align-items: center;
   border-radius: 20px;
-  margin: 5px
+  margin: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .list:hover{
   cursor: pointer;
@@ -129,16 +160,6 @@ p{
   color: orangered;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.material-icons:hover{
-  cursor: pointer;
-
-  background-color: #314e7c;
-
-  transition: all 0.4s;
-}
 
 @media (max-width: 900px) {
   .main-container {
@@ -147,7 +168,16 @@ p{
     top: auto;
     padding-bottom: 0;
   }
+  .material-icons:hover{
+    background-color: #263752;
+  }
   .dropdown-content {
-    top: -80%;
+    position: fixed;
+    bottom: 70px;
+    border-radius: 10px;
+  }
+  .list:hover{
+    cursor: pointer;
+    filter: brightness(100%);
   }
 }
