@@ -1,0 +1,206 @@
+.main-container{
+  height: 100vh;
+  width: 100%;
+  min-width: 375px;
+
+  background-color: #2E4374;
+
+  padding-top: 50px;
+}
+
+.content-add-div{
+  width: 100%;
+}
+.sm_list_add{
+  border-radius: 10px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+
+  border: 1px white solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 100%;
+}
+.list_member_add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: #7C81AD;
+
+  border-radius: 10px;
+  margin: auto;
+
+  width: 320px;
+}
+
+.socials{
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin-right: 5px;
+}
+.sm_icon{
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  border: 1px white solid;
+}
+.sm_name{
+  color: white;
+  font-weight: lighter;
+  width: 85px;
+  background-color: #4B527E;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+  text-align: center;
+
+  border: none;
+  outline: none;
+}
+.addbutton{
+  border-radius: 10px;
+  border: none;
+
+  background-color: #0a7ae5;
+
+  color: #e0dddd;
+  font-size: 12px;
+
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.addbutton:hover{
+  cursor: pointer;
+  background-color: #2a8ef3;
+  transition: all 0.4s;
+}
+.removebutton{
+  border-radius: 10px;
+  border: none;
+
+  background-color: orangered;
+
+  color: #e0dddd;
+  font-size: 12px;
+
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.removebutton:hover{
+  cursor: pointer;
+  background-color: #ff2f00;
+  transition: all 0.4s;
+}
+.updatebutton{
+  border-radius: 10px;
+  border: none;
+
+  background-color: #1c7541;
+
+  color: #e0dddd;
+  font-size: 12px;
+
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.updatebutton:hover{
+  cursor: pointer;
+  background-color: #1f884b;
+  transition: all 0.4s;
+}
+.sm_url_input{
+  color: white;
+  font-weight: lighter;
+  width: 85%;
+  background-color: #4B527E;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+}
+
+.content-load-div{
+  width: 100%;
+}
+.sm_list_load{
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+
+  background-color: #E5C3A6;
+
+  display: block;
+
+  overflow: auto;
+  height: 460px;
+  width: 330px;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 20px;
+}
+.list_member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: #7C81AD;
+
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 5px;
+
+  width: 320px;
+}
+
+@media (max-width: 900px) {
+  .main-container{
+    min-height: 100%;
+    max-width: 900px;
+  }
+  .sm_list_add{
+    margin-right: 0;
+  }
+  .sm_icon{
+    height: 22px;
+    width: 22px;
+  }
+  .sm_name{
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+  }
+  .removebutton{
+    background-color: #e5411a;
+  }
+  .removebutton:hover{
+    background-color: #e5411a;
+  }
+  .updatebutton{
+    background-color: #1f884b;
+  }
+}
+

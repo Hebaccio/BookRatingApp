@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 import { Routes, RouterModule, RouterOutlet} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { DataEditorComponent } from './data-editor/data-editor.component';
-import { DataBasicsComponent } from './data-basics/data-basics.component';
-import { DataBookComponent } from './data-book/data-book.component';
-import { DataPersonComponent } from './data-person/data-person.component';
+import { DataEditorComponent } from './database/data-editor/data-editor.component';
+import { DataBasicsComponent } from './database/data-basics/data-basics.component';
+import { DataBookComponent } from './database/data-book/data-book.component';
+import { DataPersonComponent } from './database/data-person/data-person.component';
+import {FormsModule} from "@angular/forms";
 
 const routes : Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -36,7 +38,9 @@ const routes : Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( routes,{scrollPositionRestoration: 'enabled'}),
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
   ],
   providers: [],
   bootstrap: [AppComponent]

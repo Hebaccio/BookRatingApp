@@ -1,0 +1,38 @@
+<div class="main-container">
+
+  <!--
+  <div class="class-container">
+    <input #input (change)="onselectFile(input)">
+    <img src="{{url}}" alt="">
+    <button class="savebutton">Save</button>
+  </div>
+-->
+
+  <div class="content-add-div">
+    <div class="list_member_add">
+      <div class="socials">
+        <img src="{{url}}" class="sm_icon">
+        <input class="sm_name" [(ngModel)]="SocialMediaName">
+      </div>
+      <div class="buttoncontainer">
+        <button class="addbutton" (click)="AddSocialMedia()">Add</button>
+      </div>
+      <input class="sm_url_input" #input (change)="onselectFile(input)" [(ngModel)]="Picture" >
+    </div>
+  </div>
+
+  <div class="content-load-div">
+    <div class="sm_list_load">
+      <div class="list_member" *ngFor="let sm of socialMedia">
+        <div class="socials">
+          <img src="{{sm.picture}}" class="sm_icon">
+          <!--<p class="sm_name">{{sm["socialMediaName"]}}</p>-->
+          <input class="sm_name" ngModel ="{{sm.socialMediaName}}">
+        </div>
+        <div class="buttoncontainer">
+          <button class="updatebutton">Update</button>
+          <button class="removebutton">Remove</button>
+        </div>
+        <input class="sm_url_input" placeholder="Picture URL" ngModel="{{sm.picture}}" >
+      </div>
+  </div>

@@ -10,6 +10,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options => options.AddPolicy(name: "FrontendUI",
+    policy =>
+    {
+        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+    }
+    ));
+
 builder.Services.AddDbContext<BookiesContext>
     ( dbContext => dbContext.UseSqlServer("server = localhost ; database=Bookies5 ; integrated security = true ; TrustServerCertificate = true"));
 
@@ -21,6 +28,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("FrontendUI");
 
 app.UseHttpsRedirection();
 
