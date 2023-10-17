@@ -1,23 +1,23 @@
 <div class="main-container">
   <div class="centered">
     <div class="pic-container">
-      <input class="url_input" placeholder="Picture URL:">
-      <img src="" class="BookPicture">
+      <input class="url_input" #input (change)="onselectFile(input)" placeholder="Picture URL:" [(ngModel)]="Picture">
+      <img src="{{url}}" class="BookPicture">
     </div>
   </div>
   <div class="centered">
     <div class="book-data1">
-      <input class="book-variable" placeholder="Title:">
-      <input class="book-variable" placeholder="Publish date (mm/dd/yyyy):">
-      <select class="book-variable-select" name="membership" id="membership">
+      <input class="book-variable" placeholder="Title:" [(ngModel)]="Title">
+      <input class="book-variable" placeholder="Publish date (mm/dd/yyyy):" [(ngModel)]="Date">
+      <select class="book-variable-select" name="membership" id="membership" [(ngModel)]="Status">
         <option value=""></option>
         <option value="Upcoming">Upcoming</option>
         <option value="Released">Released</option>
       </select>
-      <input class="book-variable" placeholder="Page count:">
-      <textarea class="about-book" placeholder="Description:"></textarea>
+      <input class="book-variable" placeholder="Page count:" [(ngModel)]="PageCount">
+      <textarea class="about-book" placeholder="Description:" [(ngModel)]="Description"></textarea>
       <div class="buttoncontainer">
-        <button class="addbutton">Add</button>
+        <button class="addbutton" (click)="AddBook()">Add</button>
       </div>
     </div>
   </div>

@@ -27,7 +27,7 @@ namespace Bookies.API.Controllers.BookControllers
         }
 
         [HttpPost]
-        public ActionResult AddBook([FromForm] BookAddVM B)
+        public ActionResult AddBook([FromBody] BookAddVM B)
         {
             var Book = new Book()
             {
