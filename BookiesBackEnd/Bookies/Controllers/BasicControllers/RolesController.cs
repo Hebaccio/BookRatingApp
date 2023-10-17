@@ -25,7 +25,7 @@ namespace Bookies.API.Controllers.BasicController
         }
 
         [HttpPost]
-        public ActionResult Add([FromForm] RoleAddVM R)
+        public ActionResult Add([FromBody] RoleAddVM R)
         {
 
             var Role = new Role();
@@ -42,17 +42,17 @@ namespace Bookies.API.Controllers.BasicController
 
             db.Role.Add(Role);
             db.SaveChanges();
-            return Ok($"Role {Role.RoleName} succesfully added!");
+            return Ok();
         }
 
         [HttpPost]
-        public ActionResult Update([FromForm] RoleUpdateVM R)
+        public ActionResult Update([FromBody] RoleUpdateVM R)
         {
             var Role = db.Role.FirstOrDefault(ROLE=>ROLE.RoleID==R.RoleID);
 
             if (Role == null)
             {
-                return BadRequest("Role not found!");
+                return BadRequest();
             }
 
             if (R.Order > Role.Order)
@@ -69,7 +69,7 @@ namespace Bookies.API.Controllers.BasicController
 
             db.Role.Update(Role);
             db.SaveChanges();
-            return Ok($"Role {Role.RoleName} succesfully updated!");
+            return Ok();
         }
 
         [HttpDelete("{RoleID}")]
@@ -79,14 +79,14 @@ namespace Bookies.API.Controllers.BasicController
 
             if (Role == null)
             {
-                return BadRequest("Role not found!");
+                return BadRequest();
             }
 
             db.Role.Remove(Role);
             db.SaveChanges();
             Order(db.Role.ToList());
 
-            return Ok($"Role {Role.RoleName} succesfuly removed!");
+            return Ok();
         }
 
         private void Order(List<Role> Roles)

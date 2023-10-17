@@ -12,6 +12,7 @@ import { DataBasicsComponent } from './database/data-basics/data-basics.componen
 import { DataBookComponent } from './database/data-book/data-book.component';
 import { DataPersonComponent } from './database/data-person/data-person.component';
 import {FormsModule} from "@angular/forms";
+import { FooterComponent } from './footer/footer.component';
 
 const routes : Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -34,7 +35,8 @@ const routes : Routes = [
     DataEditorComponent,
     DataBasicsComponent,
     DataBookComponent,
-    DataPersonComponent
+    DataPersonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

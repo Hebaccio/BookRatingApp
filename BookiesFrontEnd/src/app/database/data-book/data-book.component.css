@@ -1,0 +1,133 @@
+.main-container{
+  width: 100%;
+  min-width: 375px;
+  min-height: 100vh;
+  background-color: #315796;
+}
+.centered{
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.pic-container{
+  border: 1px solid black;
+  height: 310px;
+  width: 300px;
+  padding-bottom: 7px;
+  background-color: #2b4575;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.url_input{
+    color: white;
+    font-weight: lighter;
+    width: 85%;
+    background-color: #263752;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    border: none;
+    outline: none;
+}
+.BookPicture{
+  width: 180px;
+  height: 240px;
+  margin: auto;
+  border-radius: 15px;
+}
+.book-data1{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-width: 1160px;
+  height: auto;
+  border: 1px solid black;
+  width: 80%;
+  padding-bottom: 7px;
+  background-color: #2b4575;
+  border-radius: 15px;
+}
+.book-variable{
+  height: 30px;
+  width: 20%;
+  min-width: 250px;
+
+  color: white;
+  font-weight: lighter;
+
+  background-color: #263752;
+
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin:10px;
+
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+}
+.book-variable-select{
+  height: 36px;
+  width: 23%;
+  min-width: 250px;
+
+  color: white;
+  font-weight: lighter;
+
+  background-color: #263752;
+
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin:10px;
+
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+}
+.about-book{
+  height: 150px;
+  width: 95%;
+
+  color: white;
+
+  background-color: #263752;
+
+  padding: 10px;
+  margin:10px;
+
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+}
+.addbutton{
+  border-radius: 10px;
+  border: none;
+
+  background-color: #0a7ae5;
+
+  color: #e0dddd;
+  font-size: 15px;
+
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+.addbutton:hover{
+  cursor: pointer;
+  background-color: #2a8ef3;
+  transition: all 0.4s;
+}

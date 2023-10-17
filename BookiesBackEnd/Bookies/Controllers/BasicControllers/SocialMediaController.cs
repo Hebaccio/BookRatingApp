@@ -25,7 +25,7 @@ namespace Bookies.API.Controllers.BasicController
         }
 
         [HttpPost]
-        public ActionResult Add([FromForm] SocialMediaAddVM SM)
+        public ActionResult Add([FromBody] SocialMediaAddVM SM)
         {
             var SocialMedia = new SocialMedia();
 
@@ -34,13 +34,13 @@ namespace Bookies.API.Controllers.BasicController
 
             db.SocialMedia.Add(SocialMedia);
             db.SaveChanges();
-            return Ok($"New social media {SocialMedia.SocialMediaName} succesfully added!");
+            return Ok();
         }
 
         [HttpPost]
-        public ActionResult Update([FromForm] SocialMediaUpdateVM SM)
+        public ActionResult Update([FromBody] SocialMediaUpdateVM SM)
         {
-            var SocialMedia = db.SocialMedia.FirstOrDefault(Social=> Social.ID == SM.SocialMediaID);
+            var SocialMedia = db.SocialMedia.FirstOrDefault(Social=> Social.ID == SM.ID);
 
             if (SocialMedia == null)
             {
@@ -55,19 +55,19 @@ namespace Bookies.API.Controllers.BasicController
             return Ok($"Social media {SocialMedia.SocialMediaName} succesfully updated!");
         }
 
-        [HttpDelete("{SocialMediaID}")]
-        public ActionResult Delete(int SocialMediaID)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
-            var SocialMedia = db.SocialMedia.FirstOrDefault(SM => SM.ID == SocialMediaID);
+            var SocialMedia = db.SocialMedia.FirstOrDefault(SM => SM.ID == id);
 
             if(SocialMedia == null)
             {
-                return BadRequest("Social media not found!");
+                return BadRequest();
             }
 
             db.SocialMedia.Remove(SocialMedia);
             db.SaveChanges();
-            return Ok("Social media succesfuly removed!");
+            return Ok();
         }
     }
 }

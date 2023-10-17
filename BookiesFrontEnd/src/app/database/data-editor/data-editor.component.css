@@ -1,17 +1,18 @@
 body {
   background-color: #295486;
+  min-width: 375px;
+  min-height: 100vh;
 }
-
 .gap{
   padding-top: 25px;
   height: 55px;
   width: 100%;
-  background-color: #295486;
+  background-color: #12263d;
 }
 .Navigation{
   height: 55px;
   width: 100%;
-  background-color: #295486;
+  background-color: #12263d;
 
   display: flex;
   justify-content: center;

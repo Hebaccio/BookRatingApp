@@ -1,5 +1,6 @@
 using Bookies.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,12 +11,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddCors(options => options.AddPolicy(name: "FrontendUI",
-    policy =>
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontendUI", policy =>
     {
         policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
-    }
-    ));
+        //policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyMethod();
+    });
+});
 
 builder.Services.AddDbContext<BookiesContext>
     ( dbContext => dbContext.UseSqlServer("server = localhost ; database=Bookies5 ; integrated security = true ; TrustServerCertificate = true"));
@@ -30,6 +33,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("FrontendUI");
+//app.UseCors("FrontendMobile");
 
 app.UseHttpsRedirection();
 

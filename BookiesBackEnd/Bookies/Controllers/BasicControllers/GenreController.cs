@@ -24,7 +24,7 @@ namespace Bookies.API.Controllers.BasicController
         }
 
         [HttpPost]
-        public ActionResult AddGenre([FromForm] GenreTagAddVM G)
+        public ActionResult AddGenre([FromBody] GenreTagAddVM G)
         {
             var NewGenre = new Genre();
             NewGenre.GenreName = G.Name;
@@ -32,17 +32,17 @@ namespace Bookies.API.Controllers.BasicController
 
             db.Genre.Add(NewGenre);
             db.SaveChanges();
-            return Ok($"{NewGenre.GenreName} added top the database!");
+            return Ok();
         }
 
         [HttpPost]
-        public ActionResult Update([FromForm] GenreTagUpdateVM G)
+        public ActionResult Update([FromBody] GenreTagUpdateVM G)
         {
             var Genre = db.Genre.FirstOrDefault(Gen => Gen.GenreID == G.ID);
 
             if (Genre == null)
             {
-                return BadRequest("Genre not found!");
+                return BadRequest();
             }
 
             Genre.GenreName = G.Name;
@@ -50,7 +50,7 @@ namespace Bookies.API.Controllers.BasicController
 
             db.Genre.Update(Genre);
             db.SaveChanges();
-            return Ok($"{Genre.GenreName} genre succesfully updated!");
+            return Ok();
         }
 
         [HttpDelete("{GenreID}")]
@@ -60,12 +60,12 @@ namespace Bookies.API.Controllers.BasicController
 
             if (Genre == null)
             {
-                return BadRequest("Genre media not found!");
+                return BadRequest();
             }
 
             db.Genre.Remove(Genre);
             db.SaveChanges();
-            return Ok($"{Genre.GenreName} succesfuly removed!");
+            return Ok();
         }
     }
 }

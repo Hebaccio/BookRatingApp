@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2, ElementRef } from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  constructor(private router: Router) {}
+  constructor(private router: Router, private renderer:Renderer2, private el: ElementRef) {}
   isFixed: boolean = true;
   previousScrollPos: number = 0;
 
@@ -21,13 +21,11 @@ export class NavbarComponent implements OnInit{
     const currentScrollPos = window.scrollY;
 
     if (currentScrollPos > this.previousScrollPos) {
-      // Scrolling down, hide the component
-      this.isFixed = false;
+      this.isFixed=false;
     } else {
-      // Scrolling up, show the component
-      this.isFixed = true;
+      //this.renderer.setStyle(this.el.nativeElement.querySelector('.main-container'), 'opacity', 1);
+      this.isFixed=true;
     }
-
     this.previousScrollPos = currentScrollPos;
   }
   OpenHome() {

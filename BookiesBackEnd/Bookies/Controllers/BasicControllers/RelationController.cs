@@ -24,7 +24,7 @@ namespace Bookies.API.Controllers.BasicControllers
         }
 
         [HttpPost]
-        public ActionResult Add([FromForm] RelationAddVM R)
+        public ActionResult Add([FromBody] RelationAddVM R)
         {
 
             var Relation = new Relation();
@@ -41,17 +41,17 @@ namespace Bookies.API.Controllers.BasicControllers
 
             db.Relation.Add(Relation);
             db.SaveChanges();
-            return Ok($"Relation {Relation.RelationName} succesfully added!");
+            return Ok();
         }
 
         [HttpPost]
-        public ActionResult Update([FromForm] RelationUpdateVM R)
+        public ActionResult Update([FromBody] RelationUpdateVM R)
         {
             var Relation = db.Relation.FirstOrDefault(Relation => Relation.RelationID == R.RelationID);
 
             if (Relation == null)
             {
-                return BadRequest("Relation not found!");
+                return BadRequest();
             }
 
             if (R.RelationOrder > Relation.RelationOrder)
@@ -68,7 +68,7 @@ namespace Bookies.API.Controllers.BasicControllers
 
             db.Relation.Update(Relation);
             db.SaveChanges();
-            return Ok($"Relation {Relation.RelationName} succesfully updated!");
+            return Ok();
         }
 
         [HttpDelete("{RelationID}")]
@@ -78,14 +78,14 @@ namespace Bookies.API.Controllers.BasicControllers
 
             if (Relation == null)
             {
-                return BadRequest("Relation not found!");
+                return BadRequest();
             }
 
             db.Relation.Remove(Relation);
             db.SaveChanges();
             Order(db.Relation.ToList());
 
-            return Ok($"Relation {Relation.RelationName} succesfuly removed!");
+            return Ok();
         }
 
         private void Order(List<Relation> Relations)

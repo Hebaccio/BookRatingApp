@@ -24,7 +24,7 @@ namespace Bookies.API.Controllers.BasicController
         }
 
         [HttpPost]
-        public ActionResult AddTag([FromForm] GenreTagAddVM T)
+        public ActionResult AddTag([FromBody] GenreTagAddVM T)
         {
             var NewTag = new Tag();
             NewTag.TagName = T.Name;
@@ -32,17 +32,17 @@ namespace Bookies.API.Controllers.BasicController
 
             db.Tag.Add(NewTag);
             db.SaveChanges();
-            return Ok($"{NewTag.TagName} succesfully added to the database!");
+            return Ok();
         }
 
         [HttpPost]
-        public ActionResult Update([FromForm] GenreTagUpdateVM T)
+        public ActionResult Update([FromBody] GenreTagUpdateVM T)
         {
             var Tag = db.Tag.FirstOrDefault(Tag => Tag.TagID == T.ID);
 
             if (Tag == null)
             {
-                return BadRequest("Tag not found!");
+                return BadRequest();
             }
 
             Tag.TagName = T.Name;
@@ -50,7 +50,7 @@ namespace Bookies.API.Controllers.BasicController
 
             db.Tag.Update(Tag);
             db.SaveChanges();
-            return Ok($"{Tag.TagName} tag succesfully updated!");
+            return Ok();
         }
 
         [HttpDelete("{TagID}")]
@@ -60,12 +60,12 @@ namespace Bookies.API.Controllers.BasicController
 
             if (Tag == null)
             {
-                return BadRequest("Tag not found!");
+                return BadRequest();
             }
 
             db.Tag.Remove(Tag);
             db.SaveChanges();
-            return Ok($"Tag {Tag.TagName} succesfuly removed!");
+            return Ok();
         }
     }
 }

@@ -1,38 +1,156 @@
 <div class="main-container">
+<div class="group-container">
 
-  <!--
-  <div class="class-container">
-    <input #input (change)="onselectFile(input)">
-    <img src="{{url}}" alt="">
-    <button class="savebutton">Save</button>
+  <div class="content-container">
+
+    <div class="content-add-div">
+        <h3>Add social media</h3>
+        <div class="socials">
+          <img src="{{url}}" class="sm_icon">
+          <input class="sm_name" [(ngModel)]="SocialMediaName" placeholder="Social media">
+        </div>
+        <div class="buttoncontainer">
+          <button class="addbutton" (click)="AddSocialMedia()">Add</button>
+        </div>
+        <input class="sm_url_input" #input (change)="onselectFile(input)" [(ngModel)]="Picture" placeholder="Picture URL">
+    </div>
+
+    <div class="content-load-div">
+      <h3>Update/Edit social media</h3>
+      <div class="ToLoad">
+        <div class="list-member" *ngFor="let sm of socialMedia">
+          <div class="socials">
+            <img src="{{sm.picture}}" class="sm_icon">
+            <input class="sm_name" [(ngModel)]="sm.socialMediaName">
+          </div>
+          <div class="buttoncontainer">
+            <button class="updatebutton" (click)="UpdateSocialMedia(sm)">Update</button>
+            <button class="removebutton" (click)="RemoveSocialMedia(sm.id)">Remove</button>
+          </div>
+          <input class="sm_url_input" #input (change)="onselectFile(input)" [(ngModel)]="sm.picture">
+        </div>
+      </div>
+    </div>
+
   </div>
--->
 
-  <div class="content-add-div">
-    <div class="list_member_add">
-      <div class="socials">
-        <img src="{{url}}" class="sm_icon">
-        <input class="sm_name" [(ngModel)]="SocialMediaName">
+  <div class="content-container">
+
+    <div class="content-add-div">
+      <h3>Add genre</h3>
+      <div class="genre">
+        <input class="genre_name" [(ngModel)]="GenreName" placeholder="Name">
+        <button class="addbutton" (click)="AddGenre()">Add</button>
       </div>
-      <div class="buttoncontainer">
-        <button class="addbutton" (click)="AddSocialMedia()">Add</button>
+      <textarea class="genre-description" [(ngModel)]="GenreDescription" placeholder="Genre description"></textarea>
+    </div>
+
+    <div class="content-load-div2">
+      <h3>Update/Delete a genre</h3>
+      <div class="ToLoad">
+        <div class="list-member" *ngFor="let g of genre">
+          <div class="genre">
+            <input class="genre_name" [(ngModel)]="g.genreName">
+          </div>
+          <div class="buttoncontainer">
+            <button class="updatebutton" (click)="UpdateGenre(g)">Update</button>
+            <button class="removebutton" (click)="RemoveGenre(g.genreID)">Remove</button>
+          </div>
+          <textarea class="genre-description" [(ngModel)]="g.genreDescription"></textarea>
+        </div>
       </div>
-      <input class="sm_url_input" #input (change)="onselectFile(input)" [(ngModel)]="Picture" >
+    </div>
+
+  </div>
+
+  <div class="content-container">
+
+    <div class="content-add-div">
+      <h3>Add Tags</h3>
+      <div class="genre">
+        <input class="genre_name" [(ngModel)]="TagName" placeholder="Name">
+        <button class="addbutton" (click)="AddTag()">Add</button>
+      </div>
+      <textarea class="genre-description" [(ngModel)]="TagDescription" placeholder="Tag description"></textarea>
+    </div>
+
+    <div class="content-load-div2">
+      <h3>Update/Delete a tag</h3>
+      <div class="ToLoad">
+        <div class="list-member" *ngFor="let t of tag">
+          <div class="genre">
+            <input class="genre_name" [(ngModel)]="t.tagName">
+          </div>
+          <div class="buttoncontainer">
+            <button class="updatebutton" (click)="UpdateTag(t)">Update</button>
+            <button class="removebutton" (click)="RemoveTag(t.tagID)">Remove</button>
+          </div>
+          <textarea class="genre-description" [(ngModel)]="t.tagDescription"></textarea>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="content-load-div">
-    <div class="sm_list_load">
-      <div class="list_member" *ngFor="let sm of socialMedia">
-        <div class="socials">
-          <img src="{{sm.picture}}" class="sm_icon">
-          <!--<p class="sm_name">{{sm["socialMediaName"]}}</p>-->
-          <input class="sm_name" ngModel ="{{sm.socialMediaName}}">
-        </div>
-        <div class="buttoncontainer">
-          <button class="updatebutton">Update</button>
-          <button class="removebutton">Remove</button>
-        </div>
-        <input class="sm_url_input" placeholder="Picture URL" ngModel="{{sm.picture}}" >
+  <div class="content-container">
+    <div class="content-add-div">
+      <h3>Add a role</h3>
+      <div class="role">
+        <input class="role-name" [(ngModel)]="RoleName" placeholder="Name">
+        <input class="role-order" [(ngModel)]="RoleOrder" placeholder="Order">
       </div>
+      <div class="buttoncontainer">
+        <button class="addbutton" (click)="AddRole()">Add</button>
+      </div>
+    </div>
+
+    <div class="content-load-div2">
+      <h3>Update/Delete a role</h3>
+      <div class="ToLoad2">
+        <div class="list-member2" *ngFor="let r of role">
+          <div class="role">
+            <input class="role-name" [(ngModel)]="r.roleName" placeholder="Name">
+            <input class="role-order" [(ngModel)]="r.order" placeholder="Order">
+          </div>
+          <div class="buttoncontainer">
+            <button class="updatebutton" (click)="UpdateRole(r)" >Update</button>
+            <button class="removebutton" (click)="RemoveRole(r.roleID)">Remove</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
+
+  <div class="content-container">
+
+    <div class="content-add-div">
+      <h3>Add a relation</h3>
+      <div class="role">
+        <input class="role-name" [(ngModel)]="RelationName" placeholder="Name">
+        <input class="role-order" [(ngModel)]="RelationOrder" placeholder="Order">
+      </div>
+      <div class="buttoncontainer">
+        <button class="addbutton" (click)="AddRelation()">Add</button>
+      </div>
+    </div>
+
+    <div class="content-load-div2">
+      <h3>Update/Delete a relation</h3>
+      <div class="ToLoad2">
+        <div class="list-member2" *ngFor="let r of relation">
+          <div class="role">
+            <input class="role-name" [(ngModel)]="r.relationName" placeholder="Name">
+            <input class="role-order" [(ngModel)]="r.relationOrder" placeholder="Order">
+          </div>
+          <div class="buttoncontainer">
+            <button class="updatebutton" (click)="UpdateRelation(r)">Update</button>
+            <button class="removebutton" (click)="RemoveRelation(r.relationID)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
