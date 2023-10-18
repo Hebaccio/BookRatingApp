@@ -1,8 +1,8 @@
 .main-container{
   width: 100%;
   min-width: 375px;
-  min-height: 100vh;
   background-color: #295486;
+  padding-bottom: 20px;
 }
 .group-container{
   width: 100%;

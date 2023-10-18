@@ -32,19 +32,19 @@ namespace Bookies.API.Controllers.BookControllers
         }
 
         [HttpPost]
-        public ActionResult AddCharacter([FromForm] CharacterAddVM C)
+        public ActionResult AddCharacter([FromBody] CharacterAddVM C)
         {
             var Character = new Character()
             {
                 Name = C.Name,
-                Picture = C.Picture == null ? "https://i1.sndcdn.com/avatars-PkAmzSOLCdxklQgS-AokumA-t500x500.jpg" : C.Picture,
+                Picture = C.Picture,
                 About=C.About,
                 Age=C.Age,
             };
 
             db.Character.Add(Character);
             db.SaveChanges();
-            return Ok($"{C.Name} added to the database!");
+            return Ok();
         }
 
         [HttpPost]

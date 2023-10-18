@@ -1,24 +1,51 @@
 <div class="main-container">
-  <div class="centered">
-    <div class="pic-container">
-      <input class="url_input" #input (change)="onselectFile(input)" placeholder="Picture URL:" [(ngModel)]="Picture">
-      <img src="{{url}}" class="BookPicture">
-    </div>
-  </div>
-  <div class="centered">
-    <div class="book-data1">
-      <input class="book-variable" placeholder="Title:" [(ngModel)]="Title">
-      <input class="book-variable" placeholder="Publish date (mm/dd/yyyy):" [(ngModel)]="Date">
-      <select class="book-variable-select" name="membership" id="membership" [(ngModel)]="Status">
-        <option value=""></option>
-        <option value="Upcoming">Upcoming</option>
-        <option value="Released">Released</option>
-      </select>
-      <input class="book-variable" placeholder="Page count:" [(ngModel)]="PageCount">
-      <textarea class="about-book" placeholder="Description:" [(ngModel)]="Description"></textarea>
-      <div class="buttoncontainer">
-        <button class="addbutton" (click)="AddBook()">Add</button>
+  <div class="content">
+
+    <div class="list-member">
+      <div class="book-data1">
+        <input class="url_input" #input (change)="onselectFile(input)" placeholder="Book picture URL:" [(ngModel)]="Picture">
+        <img src="{{url}}" class="BookPicture">
+        <input class="book-variable" placeholder="Book title:" [(ngModel)]="Title">
+        <input class="book-variable" placeholder="Publish date (mm/dd/yyyy):" [(ngModel)]="Date">
+        <select class="book-variable-select" name="membership" id="membership" [(ngModel)]="Status">
+          <option value=""></option>
+          <option value="Upcoming">Upcoming</option>
+          <option value="Released">Released</option>
+        </select>
+        <input class="book-variable" placeholder="Page count:" [(ngModel)]="PageCount">
+        <textarea class="about-book" placeholder="Description:" [(ngModel)]="Description"></textarea>
+        <div class="buttoncontainer">
+          <button class="addbutton" (click)="AddBook()">Add</button>
+        </div>
       </div>
     </div>
+
+    <div class="list-member">
+      <div class="book-data1">
+        <input class="url_input" #input2 (change)="onselectFile2(input2)" placeholder="Character picture URL:" [(ngModel)]="Picture2">
+        <img src="{{url2}}" class="BookPicture">
+        <input class="book-variable" placeholder="Name :" [(ngModel)]="Name">
+        <input class="book-variable" placeholder="Age:" [(ngModel)]="Age">
+        <textarea class="about-book" placeholder="About:" [(ngModel)]="About"></textarea>
+        <div class="buttoncontainer">
+          <button class="addbutton" (click)="AddCharacter()">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-member">
+      <div class="book-data1">
+        <input class="url_input" #input3 (change)="onselectFile3(input3)" placeholder="Person picture URL:" [(ngModel)]="Picture3">
+        <img src="{{url3}}" class="BookPicture">
+        <input class="book-variable" placeholder="Name :" [(ngModel)]="PersonName">
+        <input class="book-variable" placeholder="Birthday (mm/dd/yyyy):" [(ngModel)]="Birthday">
+        <input class="book-variable" placeholder="Website :" [(ngModel)]="PersonWebsite">
+        <textarea class="about-book" placeholder="Bio:" [(ngModel)]="Bio"></textarea>
+        <div class="buttoncontainer">
+          <button class="addbutton" (click)="AddPerson()">Add</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

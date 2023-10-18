@@ -43,7 +43,7 @@ namespace Bookies.API.Controllers.BookControllers
             db.Book.Add(Book);
             db.SaveChanges();
 
-            return Ok($"{Book.Title} succesfully added to the database!");
+            return Ok();
         }
 
         [HttpPost]

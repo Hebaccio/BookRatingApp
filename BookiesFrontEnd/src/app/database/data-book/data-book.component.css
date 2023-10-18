@@ -1,26 +1,43 @@
 .main-container{
   width: 100%;
   min-width: 375px;
-  min-height: 100vh;
-  background-color: #315796;
-}
-.centered{
-  width: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-.pic-container{
-  border: 1px solid black;
-  height: 310px;
-  width: 300px;
-  padding-bottom: 7px;
-  background-color: #2b4575;
-  border-radius: 15px;
+  background-color: #295486;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.content{
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.list-member{
+  height: 720px;
+  width: 350px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
   margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.book-data1{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-width: 1160px;
+  height: auto;
+  border: 1px solid black;
+  width: 320px;
+  padding-bottom: 7px;
+  background-color: #2b4575;
+  border-radius: 15px;
 }
 .url_input{
     color: white;
@@ -41,19 +58,6 @@
   width: 180px;
   height: 240px;
   margin: auto;
-  border-radius: 15px;
-}
-.book-data1{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 1160px;
-  height: auto;
-  border: 1px solid black;
-  width: 80%;
-  padding-bottom: 7px;
-  background-color: #2b4575;
   border-radius: 15px;
 }
 .book-variable{

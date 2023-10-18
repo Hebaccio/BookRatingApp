@@ -33,7 +33,7 @@ namespace Bookies.API.Controllers.PersonController
         }
 
         [HttpPost]
-        public ActionResult AddPerson([FromForm] PersonAddVM P)
+        public ActionResult AddPerson([FromBody] PersonAddVM P)
         {
             var Person = new Person()
             {
@@ -47,7 +47,7 @@ namespace Bookies.API.Controllers.PersonController
             db.Person.Add(Person);
             db.SaveChanges();
 
-            return Ok($"{Person.Name} succesfully added to the database!");
+            return Ok();
         }
 
         [HttpPost]
