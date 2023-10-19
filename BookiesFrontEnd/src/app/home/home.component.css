@@ -10,22 +10,13 @@ body{
 }
 
 .main-container{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
   width: 100%;
   min-width: 375px;
+  min-height: 100vh;
   height: auto;
-  min-height: 550px;
 
   margin-left: auto;
   margin-right: auto;
-
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 
   background:
     url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/8e35e098569979.5edf5a829a80a.jpg")
@@ -53,6 +44,12 @@ body{
 
   outline: none;
   border: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .registration:hover{
   cursor:pointer;
@@ -60,19 +57,15 @@ body{
   transition: all 0.4s;
 }
 .gap {
-  height: 110px;
+  height: 40px;
   width: 100%;
   min-width: 375px;
 }
 .content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 
   width: 100%;
-  height: auto;
-  min-height: 550px;
+  min-height: 100vh;
 
   margin-left: auto;
   margin-right: auto;
@@ -123,6 +116,11 @@ body{
 i{
   font-size: 40px;
   color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 i:hover{
   cursor: pointer;
@@ -130,7 +128,7 @@ i:hover{
 }
 .Quotes{
   width: 70%;
-  margin-top: 70px;
+  margin-top: 30px;
   padding-left: 7px;
   margin-left: auto;
   margin-right: auto;
@@ -181,9 +179,98 @@ img:hover{
   height: 30px;
 }
 
+.functionsdiv{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+}
+.member{
+  width: 80px;
+  height: 85px;
+  margin: 15px;
+
+  border: 1px solid white;
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.44);
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.member:hover{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.69);
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+.member-descr {
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 10px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#icon{
+  background: none;
+  outline: none;
+  border: none;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 55px;
+
+  color: white;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#sm-descr{
+  min-width: 99%;
+  padding-left: 7px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.sm-img{
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+}
+.sm-img:hover{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.69);
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
+}
+.gap4-bottom-nav{
+  height: 0px;
+}
+.bottom{
+  display: none;
+}
 @media (max-width: 900px) {
   .gap{
-    height: 30px;
+    height: 10px;
   }
   img{
     width: 90px;
@@ -201,6 +288,30 @@ img:hover{
   }
   .top {
     display: none
+  }
+  .bottom{
+    position: absolute;
+  }
+  .gap4-bottom-nav{
+    height: 100px;
+  }
+
+  .registration:hover{
+    background-color: #3f6196;
+  }
+  i:hover{
+    filter: brightness(100%);
+  }
+  img:hover{
+    transform: scale(1);
+  }
+  .member:hover{
+    background: rgba(0, 0, 0, 0.44);
+    transform: scale(1);
+  }
+  .sm-img:hover{
+    background: rgba(0, 0, 0, 0.69);
+    transform: scale(1);
   }
 }
 @media (max-width: 780px) {

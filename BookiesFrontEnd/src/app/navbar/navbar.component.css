@@ -97,7 +97,7 @@
 
   background-color: #263752;
 
-  width: 100px;
+  width: 120px;
 
   border-radius: 10px;
 }
@@ -163,7 +163,7 @@ p{
     filter: brightness(100%);
   }
 }
-@media (max-width: 410px) {
+@media (max-width: 450px) {
   .main-container {
     position: fixed;
     bottom: 0;

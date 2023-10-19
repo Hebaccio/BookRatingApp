@@ -1,5 +1,6 @@
 .content{
-  min-height: calc(100vh - 332px);
+  min-height: 100vh;
+  height: auto;
   background-color: #295486;
   min-width: 375px;
 }

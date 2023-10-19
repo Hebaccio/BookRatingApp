@@ -12,9 +12,6 @@ export class NavbarComponent {
   OpenHome() {
     this.router.navigateByUrl("Home");
   }
-  OpenDatabaseEditor() {
-    this.router.navigateByUrl("DatabaseEditor");
-  }
   LogOut() {
     this.router.navigateByUrl("Home");
   }

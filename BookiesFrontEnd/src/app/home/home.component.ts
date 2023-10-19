@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,15 @@ export class HomeComponent implements OnInit{
   previousScrollPos: number = 0;
   isFixed:boolean=true;
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     this.isFixed = true;
     this.previousScrollPos = window.scrollY;
+  }
+
+  OpenDatabaseEditor() {
+    this.router.navigateByUrl("DatabaseEditor");
   }
 
   @HostListener('window:scroll', ['$event'])

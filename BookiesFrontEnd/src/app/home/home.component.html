@@ -1,12 +1,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<div class="top">
-  <app-navbar></app-navbar>
-</div>
 <div class="navbar" *ngIf="isFixed">
   <app-navbar></app-navbar>
 </div>
+
 <div class="main-container">
+
+  <div class="top">
+    <app-navbar></app-navbar>
+  </div>
 
   <div class="content">
     <div class="gap"></div>
@@ -15,66 +17,56 @@
       <button class="registration">Sign-up</button>
     </div>
     <div class="container">
-      <div class="searchdiv">
-        <input class="searchbar" placeholder="Search">
-        <i class="material-icons">search</i>
-      </div>
-    </div>
-    <div class="container">
       <div class="Quotes">
         <h2>'I declare after all there is no enjoyment like reading! How much sooner one tires of anything than of a book. When I have a house of my own, I shall be miserable if I have not an excellent library.'</h2>
         <h3>Jane Austen</h3>
       </div>
+      <div class="searchdiv">
+        <input class="searchbar" placeholder="Search">
+        <i class="material-icons">search</i>
+      </div>
+      <div class="functionsdiv">
+        <div class="member">
+          <h2 class="member-descr">Browse</h2>
+          <div class="material-icons" id="icon" title="Browse">tune</div>
+        </div>
+        <div class="member" (click)="OpenDatabaseEditor()">
+          <h2 class="member-descr">Database</h2>
+          <div class="material-icons" id="icon" title="Browse">storage</div>
+        </div>
+      </div>
+      <div class="functionsdiv">
+        <div class="member">
+          <h2 class="member-descr">About us</h2>
+          <div class="material-icons" id="icon" title="Browse">badge</div>
+        </div>
+        <div class="member">
+          <h2 class="member-descr">Contact us</h2>
+          <div class="material-icons" id="icon" title="Browse">support_agent</div>
+        </div>
+        <div class="member">
+          <h2 class="member-descr">Stats</h2>
+          <div class="material-icons" id="icon" title="Browse">query_stats</div>
+        </div>
+        <div class="member">
+          <h2 class="member-descr">Terms</h2>
+          <div class="material-icons" id="icon" title="Browse">gavel</div>
+        </div>
+        <div class="member">
+          <h2 class="member-descr">Donate</h2>
+          <div class="material-icons" id="icon" title="Browse">payments</div>
+        </div>
+      </div>
+      <div class="functionsdiv">
+        <h2 id="sm-descr">Find us here:</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" class="sm-img">
+        <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-square2-512.png" class="sm-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/300px-Facebook_icon_2013.svg.png" class="sm-img">
+        <img src="https://p16-va-tiktok.ibyteimg.com/obj/musically-maliva-obj/6496a7fa2dca0a8152dd025460d1d2de.png" class="sm-img">
+        <img src="https://static-00.iconduck.com/assets.00/pinterest-icon-512x512-3vn0ggs9.png" class="sm-img">
+      </div>
     </div>
-    <div class="gap"></div>
+    <div class="gap4-bottom-nav"></div>
   </div>
 
 </div>
-
-<div class="main-container2">
-  <h1>Popular searches</h1>
-  <div class="imgdiv">
-    <h2>Highest rated</h2>
-    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1666994927i/61431922.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Most liked</h2>
-    <img src="https://churchfieldsjunior.com/wp-content/uploads/2017/10/lord-of-the-rings-tolkien.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Upcoming</h2>
-    <img src="https://imageio.forbes.com/specials-images/imageserve/6418c98f204f118e954b2898/ertac-altinoz-winds-of-winter/960x0.jpg?height=1085&width=711&fit=bounds">
-  </div>
-</div>
-<div class="main-container2">
-  <h1>Quick search by genre</h1>
-  <div class="imgdiv">
-    <h2>Romance</h2>
-    <img src="https://miblart.com/wp-content/uploads/2021/02/image8.png">
-  </div>
-  <div class="imgdiv">
-    <h2>Fantasy</h2>
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/a0c39048873339.58a470c427a06.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Sci-Fi</h2>
-    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Horror</h2>
-    <img src="https://prodimage.images-bn.com/pimages/9781501142970_p0_v3_s1200x630.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Comedy</h2>
-    <img src="https://m.media-amazon.com/images/I/51OoDlblLaL._SL500_.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Mystery</h2>
-    <img src="https://dw0i2gv3d32l1.cloudfront.net/uploads/stage/stage_image/23769/optimized_large_thumb_stage.jpg">
-  </div>
-  <div class="imgdiv">
-    <h2>Adventure</h2>
-    <img src="https://images.booksense.com/images/543/852/9789390852543.jpg">
-  </div>
-</div>
-<div class="gap2"></div>
