@@ -1,37 +1,113 @@
-.body{
+body{
+  min-width: 375px;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.main-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
   width: 100%;
   min-width: 375px;
-  background-color: #295486;
-}
-.gap{
-  padding-top: 50px;
-  height: 55px;
-  width: 100%;
-}
-.gap2{
-  padding-top: 100px;
-  height: 55px;
-  width: 100%;
-}
-.searchdiv{
-  width: 20%;
-  min-width: 300px;
+  height: auto;
+  min-height: 550px;
 
   margin-left: auto;
   margin-right: auto;
 
-  background-color: #263752;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  background:
+    url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/8e35e098569979.5edf5a829a80a.jpg")
+    no-repeat center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+}
+.buttoncontainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.registration{
+  background-color: #3f6196;
+  color: white;
+
+  border-radius: 10px;
+
+  width: 100px;
+  height: 40px;
+
+  font-size: 20px;
+
+  margin: 10px;
+
+  outline: none;
+  border: none;
+}
+.registration:hover{
+  cursor:pointer;
+  background-color: #4a70af;
+  transition: all 0.4s;
+}
+.gap {
+  height: 110px;
+  width: 100%;
+  min-width: 375px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: auto;
+  min-height: 550px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgba(0, 0, 0, 0.55);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.container{
+  width: 100%;
+}
+.searchdiv{
+  width: 70%;
+  min-width: 300px;
+  max-width: 550px;
+  height: 50px;
+
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  background-color: rgba(38, 55, 82, 0.74);
   border: 2px #9cbce3 solid;
-  border-radius: 8px;
+  border-radius: 20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .searchbar{
-  height: 30px;
+  height: 40px;
 
-  font-size: 20px;
+  font-size: 23px;
 
   width: 90%;
 
@@ -52,59 +128,62 @@ i:hover{
   cursor: pointer;
   filter: brightness(120%);
 }
-
-.main-container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.Quotes{
+  width: 70%;
+  margin-top: 70px;
+  padding-left: 7px;
+  margin-left: auto;
+  margin-right: auto;
 }
 h1{
   width: 100%;
   color: white;
   text-align: center;
-  margin-top: 60px;
-}
-.imgdiv{
-  position: relative;
-
-  width: 150px;
-  height: 255px;
-
-  margin-top: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  text-align: center;
-
-  transition: transform 0.3s ease-in-out;
+  margin: 20px;
 }
 h2{
-  width: 100%;
-  margin-bottom: 15px;
   color: white;
+  text-align: center;
+
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3{
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+.main-container2{
+  width: 100%;
+  max-width: 1000px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 img{
-  width: 150px;
-  height: 210px;
+  width: 140px;
+  height: 190px;
   border: 2px white solid;
   border-radius: 10px;
+  margin: 10px;
   transition: transform 0.3s ease-in-out;
 }
 img:hover{
   cursor: pointer;
   transform: scale(1.05);
 }
+.gap2{
+  height: 30px;
+}
 
 @media (max-width: 900px) {
   .gap{
-    padding-top: 0;
-    height: 35px;
-  }
-  .imgdiv{
-    width: 90px;
-    height: 165px;
-    margin-top: 30px;
+    height: 30px;
   }
   img{
     width: 90px;
@@ -120,8 +199,15 @@ img:hover{
   h2{
     font-size: 13px;
   }
-  .material-icons{
-    font-size: 30px;
-    padding-right: 10px;
+  .top {
+    display: none
+  }
+}
+@media (max-width: 780px) {
+  h2{
+    font-size: 20px;
+  }
+  h3{
+    font-size: 15px;
   }
 }

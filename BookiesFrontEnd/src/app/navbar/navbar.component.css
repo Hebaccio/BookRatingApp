@@ -3,9 +3,6 @@
 }
 
 .main-container{
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
 
@@ -166,7 +163,6 @@ p{
     filter: brightness(100%);
   }
 }
-
 @media (max-width: 410px) {
   .main-container {
     position: fixed;
