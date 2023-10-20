@@ -44,7 +44,7 @@ namespace Bookies.API.Controllers.BasicController
 
             if (SocialMedia == null)
             {
-                return BadRequest("Social media not found!");
+                return BadRequest();
             }
 
             SocialMedia.SocialMediaName = SM.SocialMediaName;
@@ -52,7 +52,7 @@ namespace Bookies.API.Controllers.BasicController
 
             db.SocialMedia.Update(SocialMedia);
             db.SaveChanges();
-            return Ok($"Social media {SocialMedia.SocialMediaName} succesfully updated!");
+            return Ok();
         }
 
         [HttpDelete("{id}")]

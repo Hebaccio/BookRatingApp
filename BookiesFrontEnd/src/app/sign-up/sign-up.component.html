@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="page">
+  <div class="LogInComponent">
+    <h2>Sign-up for your account</h2>
+    <div class="data">
+      <div class="data1">
+        <span class="material-icons">person</span>
+        <input type="text" placeholder="Email:" [(ngModel)]="Email">
+      </div>
+      <div class="border"></div>
+      <div class="data1">
+        <span class="material-icons">person</span>
+        <input type="text" placeholder="Username:" [(ngModel)]="Username">
+      </div>
+      <div class="border"></div>
+      <div class="data1">
+        <span class="material-icons">lock</span>
+        <input [type]="passwordType1" placeholder="Password:" [(ngModel)]="Password1">
+        <span class="material-icons" id="pass" (click)="ChangeVisibility1()">visibility</span>
+      </div>
+      <div class="border"></div>
+      <div class="data1">
+        <span class="material-icons">lock</span>
+        <input [type]="passwordType2" placeholder="Repeat password:" [(ngModel)]="Password2">
+        <span class="material-icons" id="pass" (click)="ChangeVisibility2()">visibility</span>
+      </div>
+    </div>
+    <button>Sign-up</button>
+    <h3>Already have an account?</h3>
+    <button (click)="OpenLogIn()">Log-in</button>
+  </div>
+</div>

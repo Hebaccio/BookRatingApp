@@ -21,6 +21,9 @@ export class HomeComponent implements OnInit{
   OpenDatabaseEditor() {
     this.router.navigateByUrl("DatabaseEditor");
   }
+  OpenLogIn() {
+    this.router.navigateByUrl("LogIn");
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
@@ -35,4 +38,7 @@ export class HomeComponent implements OnInit{
     this.previousScrollPos = currentScrollPos;
   }
 
+  OpenSignUp() {
+    this.router.navigateByUrl("SignUp");
+  }
 }

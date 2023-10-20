@@ -207,8 +207,8 @@ img:hover{
 .member:hover{
   cursor: pointer;
   background: rgba(0, 0, 0, 0.69);
-  transform: scale(1.1);
-  transition: ease-in-out 0.3s;
+  transform: scale(1.01);
+  transition: ease-in-out 0.1s;
 }
 .member-descr {
   width: 100%;

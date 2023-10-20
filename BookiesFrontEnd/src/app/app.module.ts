@@ -11,12 +11,16 @@ import { DataEditorComponent } from './database/data-editor/data-editor.componen
 import { DataBasicsComponent } from './database/data-basics/data-basics.component';
 import { DataBookComponent } from './database/data-book/data-book.component';
 import { DataPersonComponent } from './database/data-person/data-person.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { FooterComponent } from './footer/footer.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes : Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full'},
   {path: 'Home', component: HomeComponent},
+  {path: 'LogIn', component: LogInComponent},
+  {path: 'SignUp', component: SignUpComponent},
   {path: 'DatabaseEditor', component: DataEditorComponent,
   children:[
   {path: '', redirectTo: 'Basics', pathMatch: 'full'},
@@ -36,7 +40,9 @@ const routes : Routes = [
     DataBasicsComponent,
     DataBookComponent,
     DataPersonComponent,
-    FooterComponent
+    FooterComponent,
+    LogInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@ export class DataBasicsComponent implements OnInit{
   role!:Role[];
   relation!:Relation[];
 
+
   constructor(private bookiesService:BookiesService, private httpClient:HttpClient){}
   ngOnInit(): void {
       this.getSocialMedia();
