@@ -27,6 +27,11 @@ namespace Bookies.API.Controllers.BasicController
         [HttpPost]
         public ActionResult Add([FromBody] SocialMediaAddVM SM)
         {
+            if(SM.SocialMediaName=="" || SM.Picture == "")
+            {
+                return BadRequest();
+            }
+
             var SocialMedia = new SocialMedia();
 
             SocialMedia.SocialMediaName = SM.SocialMediaName;

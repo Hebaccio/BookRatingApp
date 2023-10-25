@@ -26,6 +26,10 @@ namespace Bookies.API.Controllers.BasicControllers
         [HttpPost]
         public ActionResult Add([FromBody] RelationAddVM R)
         {
+            if (R.RelationName == "" || R.RelationOrder == null)
+            {
+                return BadRequest();
+            }
 
             var Relation = new Relation();
             Relation.RelationName = R.RelationName;

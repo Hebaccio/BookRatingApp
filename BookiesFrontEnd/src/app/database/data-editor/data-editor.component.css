@@ -3,6 +3,14 @@ body {
   min-width: 375px;
   min-height: 100vh;
 }
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .gap{
   padding-top: 25px;
   height: 55px;
@@ -46,6 +54,9 @@ body {
   .gap{
     padding-top: 0;
     height: 0;
+  }
+  .top {
+    display: none
   }
   .Navigation{
     height: 70px;

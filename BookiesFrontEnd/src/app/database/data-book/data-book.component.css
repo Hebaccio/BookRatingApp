@@ -1,7 +1,6 @@
 .main-container{
   width: 100%;
   min-width: 375px;
-  background-color: #295486;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -14,7 +13,7 @@
   flex-wrap: wrap;
 }
 .list-member{
-  height: 720px;
+  height: 740px;
   width: 350px;
 
   margin-left: auto;
@@ -134,4 +133,14 @@
   cursor: pointer;
   background-color: #2a8ef3;
   transition: all 0.4s;
+}
+
+.gap4-bottom-nav{
+  height: 0px;
+}
+
+@media (max-width: 900px) {
+  .gap4-bottom-nav{
+    height: 100px;
+  }
 }

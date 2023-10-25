@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { BookiesService } from "../../services/bookies.service";
-import { SocialMedia } from "../../models/social media model";
-import { Genre } from "../../models/social media model";
-import { Tag } from "../../models/social media model";
-import { Role } from "../../models/social media model";
-import { Relation } from "../../models/social media model";
+import { BookiesService } from "../../Service/Bookies.Service";
+import { SocialMedia } from "../../Service/Models";
+import { Genre } from "../../Service/Models";
+import { Tag } from "../../Service/Models";
+import { Role } from "../../Service/Models";
+import { Relation } from "../../Service/Models";
 import { HttpClient } from "@angular/common/http";
 import {environment} from "../../../environments/environment";
 

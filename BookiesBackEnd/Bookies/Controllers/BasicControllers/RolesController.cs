@@ -28,6 +28,11 @@ namespace Bookies.API.Controllers.BasicController
         public ActionResult Add([FromBody] RoleAddVM R)
         {
 
+            if (R.RoleName == "" || R.Order == null)
+            {
+                return BadRequest();
+            }
+
             var Role = new Role();
             Role.RoleName = R.RoleName;
             Role.Order = R.Order;

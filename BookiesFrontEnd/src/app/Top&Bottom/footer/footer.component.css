@@ -1,0 +1,17 @@
+.content{
+  min-width: 375px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: #0e1d2c;
+}
+.img{
+  height: 300px;
+  width: 400px;
+  border: 1px white solid;
+  margin: 15px;
+}

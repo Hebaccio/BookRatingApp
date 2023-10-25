@@ -26,6 +26,11 @@ namespace Bookies.API.Controllers.BasicController
         [HttpPost]
         public ActionResult AddGenre([FromBody] GenreTagAddVM G)
         {
+            if (G.Name == "" || G.Description == "")
+            {
+                return BadRequest();
+            }
+
             var NewGenre = new Genre();
             NewGenre.GenreName = G.Name;
             NewGenre.GenreDescription = G.Description;

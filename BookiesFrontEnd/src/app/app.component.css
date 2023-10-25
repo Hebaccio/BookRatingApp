@@ -1,6 +1,6 @@
 .content{
   min-height: 100vh;
   height: auto;
-  background-color: #295486;
+  background: linear-gradient(180deg, rgba(41,84,134,1) 25%, rgba(51,100,157,1) 50%, rgba(68,120,181,1) 75%, rgba(74,128,191,1) 100%);
   min-width: 375px;
 }
