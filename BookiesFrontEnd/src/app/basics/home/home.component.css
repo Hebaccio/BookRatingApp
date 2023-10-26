@@ -18,11 +18,7 @@ body{
   margin-left: auto;
   margin-right: auto;
 
-  background:
-    url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/8e35e098569979.5edf5a829a80a.jpg")
-    no-repeat center;
-  background-size: cover !important;
-  -webkit-background-size: cover !important;
+  background-color: #14283d;
 }
 .buttoncontainer{
   width: 100%;
@@ -58,7 +54,7 @@ body{
   transition: all 0.4s;
 }
 .gap {
-  height: 40px;
+  height: 95px;
   width: 100%;
   min-width: 375px;
 }
@@ -67,11 +63,11 @@ body{
 
   width: 100%;
   min-height: 100vh;
+  height: 2000px;
 
   margin-left: auto;
   margin-right: auto;
 
-  background-color: rgba(0, 0, 0, 0.55);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -135,12 +131,6 @@ i:hover{
   margin-left: auto;
   margin-right: auto;
 }
-h1{
-  width: 100%;
-  color: white;
-  text-align: center;
-  margin: 20px;
-}
 h2{
   color: white;
   text-align: center;
@@ -148,11 +138,6 @@ h2{
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-h3{
-  color: white;
-  text-align: center;
-  margin-top: 20px;
 }
 .main-container2{
   width: 100%;
@@ -196,21 +181,21 @@ img:hover{
   height: 85px;
   margin: 15px;
 
-  border: 1px solid white;
-  border-radius: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px #050505;
+  box-shadow: 0 0 20px #050505;
 
-  background: rgba(0, 0, 0, 0.44);
+  background-color: #264973;
 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 5px;
+  transition: ease-in-out 0.2s;
 }
 .member:hover{
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.69);
-  transform: scale(1.01);
-  transition: ease-in-out 0.1s;
+  transform: scale(1.02);
 }
 .member-descr {
   width: 100%;
@@ -243,6 +228,14 @@ img:hover{
   -ms-user-select: none;
   user-select: none;
 }
+.list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #sm-descr{
   min-width: 99%;
   padding-left: 7px;
@@ -264,6 +257,23 @@ img:hover{
   transform: scale(1.1);
   transition: ease-in-out 0.2s;
 }
+
+.img-member{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.browse-h2{
+  font-size: 17px;
+}
+.img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 210px;
+}
+
 .gap4-bottom-nav{
   height: 0px;
 }

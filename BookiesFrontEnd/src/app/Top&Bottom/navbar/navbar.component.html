@@ -1,58 +1,169 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<!--<div class="main-container">
-  <button class="material-icons" id="login">login</button>
-  <div class="navbuttons-container">
-    <button class="material-icons">home</button>
-    <button class="material-icons">search</button>
-    <button class="material-icons">person</button>
+<!----------------------------->
+
+<!--Top not logged in-->
+<!--<div class="Top">
+  <div class="logo-container3">
+    <img class="Bookies-icon3" src="https://static.vecteezy.com/system/resources/thumbnails/004/853/320/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg">
+    <label>Bookies</label>
   </div>
-</div>
+</div>-->
 
-<div class="main-container">
-  <div class="navbuttons-container">
-    <button class="material-icons" title="Home">home</button>
-    <button class="material-icons" title="Browse">menu_book</button>
-    <button class="material-icons" title="Profile">person</button>
-    <div class="dropdown">
-      <button class="material-icons" id="expand">more_vert</button>
-      <div class="dropdown-content">
-        <div class="list">
-          <a class="material-icons" id="expand2">settings</a>
-          <p>Settings</p>
-        </div>
-        <div class="list">
-          <a class="material-icons" id="expand3">logout</a>
-          <p class="p">Log-out</p>
-        </div>
+<!--Nav not logged in-->
+<!--<div class="ScrollNavbar">
+  <div class="navbar">
+    <div class="logo-container">
+      <img class="Bookies-icon" src="https://static.vecteezy.com/system/resources/thumbnails/004/853/320/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg">
+      <label>Bookies</label>
+    </div>
+    <div class="navbuttons-container">
+      <div class="item">
+        <button class="material-icons" title="Home">home</button>
+        <div class="btn-name">Home</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Browse">tune</button>
+        <div class="btn-name">Browse</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Search">search</button>
+        <div class="btn-name">Search</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" id="login" title="Log-in">login</button>
+        <div class="btn-name" id="login">Log-in</div>
+      </div>
+    </div>
+  </div>
+</div>-->
 
+<!----------------------------->
+
+<!--Top logged in-->
+<!--<div class="Top">
+  <div class="logo-container2">
+    <img class="Bookies-icon2" src="https://static.vecteezy.com/system/resources/thumbnails/004/853/320/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg">
+    <label>Bookies</label>
+  </div>
+  <div class="navbuttons-container2">
+      <button class="material-icons" id="icons-top">notifications</button>
+      <button class="material-icons" id="icons-top">mail</button>
+  </div>
+</div>-->
+
+<!--Nav logged in-->
+<!--<div class="ScrollNavbar">
+  <div class="navbar">
+    <div class="logo-container">
+      <img class="Bookies-icon" src="https://static.vecteezy.com/system/resources/thumbnails/004/853/320/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg">
+      <label>Bookies</label>
+    </div>
+    <div class="navbuttons-container">
+      <div class="item">
+        <button class="material-icons" title="Home">home</button>
+        <div class="btn-name">Home</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Home">tune</button>
+        <div class="btn-name">Browse</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Home">search</button>
+        <div class="btn-name">Search</div>
+      </div>
+      <div class="item" id="icons-top">
+        <button class="material-icons" title="Settings">settings</button>
+        <div class="btn-name">Settings</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Home">person</button>
+        <div class="btn-name">Profile</div>
+      </div>
+      <div class="dropdown">
+        <button class="material-icons" id="expand">more_vert</button>
+        <div class="dropdown-content">
+          <div class="list">
+            <span class="material-icons"  id="expand2">notifications</span>
+            <p>Notifications</p>
+          </div>
+          <div class="list">
+            <span class="material-icons"  id="expand2">mail</span>
+            <p>Messages</p>
+          </div>
+          <div class="list">
+            <a class="material-icons" id="expand2">settings</a>
+            <p>Settings</p>
+          </div>
+          <div class="list">
+            <a class="material-icons" id="expand3">logout</a>
+            <p class="p">Log-out</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 -->
 
-<div class="main-container" id="maincontainer">
-  <div class="navbuttons-container">
-    <button class="material-icons" title="Home" (click)="OpenHome()">home</button>
-    <button class="material-icons" title="Browse">tune</button>
-    <button class="material-icons" title="Search">search</button>
-    <button class="material-icons" title="Profile">person</button>
-    <div class="dropdown">
-      <button class="material-icons" id="expand">more_vert</button>
-      <div class="dropdown-content">
-        <div class="list">
-          <span class="material-icons"  id="expand2">notifications</span>
-          <p>Notifications</p>
-        </div>
-        <div class="list">
-          <a class="material-icons" id="expand2">settings</a>
-          <p>Settings</p>
-        </div>
-        <div class="list" (click)="LogOut()">
-          <a class="material-icons" id="expand3">logout</a>
-          <p class="p">Log-out</p>
+<!----------------------------->
+
+<div class="Top">
+  <div class="logo-container2">
+    <img class="Bookies-icon2" src="https://static.vecteezy.com/system/resources/thumbnails/004/853/320/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg">
+    <label>Bookies</label>
+  </div>
+  <div class="navbuttons-container2">
+    <button class="material-icons" id="icons-top">notifications</button>
+    <button class="material-icons" id="icons-top">mail</button>
+  </div>
+</div>
+<div class="ScrollNavbar">
+  <div class="navbar">
+    <div class="logo-container">
+      <img class="Bookies-icon" src="https://static.vecteezy.com/system/resources/thumbnails/004/853/320/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg">
+      <label>Bookies</label>
+    </div>
+    <div class="navbuttons-container">
+      <div class="item">
+        <button class="material-icons" title="Home">home</button>
+        <div class="btn-name">Home</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Home">tune</button>
+        <div class="btn-name">Browse</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Home">search</button>
+        <div class="btn-name">Search</div>
+      </div>
+      <div class="item" id="icons-top">
+        <button class="material-icons" title="Settings">settings</button>
+        <div class="btn-name">Settings</div>
+      </div>
+      <div class="item">
+        <button class="material-icons" title="Home">person</button>
+        <div class="btn-name">Profile</div>
+      </div>
+      <div class="dropdown">
+        <button class="material-icons" id="expand">more_vert</button>
+        <div class="dropdown-content">
+          <div class="list">
+            <span class="material-icons"  id="expand2">notifications</span>
+            <p>Notifications</p>
+          </div>
+          <div class="list">
+            <span class="material-icons"  id="expand2">mail</span>
+            <p>Messages</p>
+          </div>
+          <div class="list">
+            <a class="material-icons" id="expand2">settings</a>
+            <p>Settings</p>
+          </div>
+          <div class="list">
+            <a class="material-icons" id="expand3">logout</a>
+            <p class="p">Log-out</p>
+          </div>
         </div>
       </div>
     </div>
